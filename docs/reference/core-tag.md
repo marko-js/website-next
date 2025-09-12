@@ -45,7 +45,20 @@ The `<for>` tag can iterate over:
   </for>
   ```
 
-- Ranges of numbers with the `to=`, `from=`, and `step=` attributes
+- **Exclusive** ranges of numbers with the `until=`, `from=`, and `step=` attributes
+
+  ```marko
+  <for|num| until=5>${num}</for>
+  // 0 1 2 3 4
+
+  <for|num| from=3 until=7>${num}</for>
+  // 3 4 5 6
+
+  <for|num| from=2 until=10 step=2>${num}</for>
+  // 2 4 6 8
+  ```
+
+- **Inclusive** ranges of numbers with the `to=`, `from=`, and `step=` attributes
 
   ```marko
   <for|num| to=5>${num}</for>
